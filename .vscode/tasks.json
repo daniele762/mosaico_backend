@@ -1,0 +1,187 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Android app",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"assembleDebug"
+			]
+		},
+		{
+			"label": "Build Android app",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"assembleDebug"
+			]
+		},
+		{
+			"label": "Assemble and install debug",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"installDebug"
+			]
+		},
+		{
+			"label": "Build and install updated app",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"installDebug"
+			]
+		},
+		{
+			"label": "Build and install updated app",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"installDebug"
+			]
+		},
+		{
+			"label": "Build e installa nuova versione WhatsApp",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"installDebug"
+			]
+		},
+		{
+			"label": "Build e installa app aggiornata",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"installDebug"
+			]
+		},
+		{
+			"label": "Rebuild e installa dopo fix",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"installDebug"
+			]
+		},
+		{
+			"label": "Build e installa dopo riordino file",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"installDebug"
+			]
+		},
+		{
+			"label": "Build e installa app corretta",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"installDebug"
+			]
+		},
+		{
+			"label": "Build e installa dopo ripristino",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				"-p",
+				"androidApp",
+				"installDebug"
+			]
+		},
+		{
+			"label": "Build e installa mosaico",
+			"type": "shell",
+			"command": "./gradlew -p androidApp installDebug",
+			"problemMatcher": [
+				"$javac"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build e installa mosaico",
+			"type": "shell",
+			"command": "./gradlew -p androidApp installDebug",
+			"problemMatcher": [
+				"$javac"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build e installa mosaico",
+			"type": "shell",
+			"command": "./gradlew -p androidApp installDebug",
+			"problemMatcher": [
+				"$javac"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build e installa mosaico",
+			"type": "shell",
+			"command": "./gradlew -p androidApp installDebug",
+			"problemMatcher": [
+				"$javac"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build e installa mosaico",
+			"type": "shell",
+			"command": "./gradlew -p androidApp installDebug",
+			"problemMatcher": [
+				"$javac"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build e installa mosaico",
+			"type": "shell",
+			"command": "./gradlew -p androidApp installDebug",
+			"problemMatcher": [
+				"$javac"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build e installa mosaico",
+			"type": "shell",
+			"command": "./gradlew -p androidApp installDebug",
+			"problemMatcher": [
+				"$javac"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build e installa mosaico",
+			"type": "shell",
+			"command": "./gradlew -p androidApp installDebug",
+			"problemMatcher": [
+				"$javac"
+			],
+			"group": "build"
+		}
+	]
+}

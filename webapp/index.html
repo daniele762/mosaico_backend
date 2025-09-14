@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrazione Clienti</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 2rem; background:#fafafa; }
+    .card { max-width: 520px; margin: 0 auto; background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+    .row { display: flex; gap: .75rem; }
+    .row > * { flex: 1; }
+    label { display:block; margin:.25rem 0 .25rem; font-weight:600; }
+    input { width:100%; padding:.75rem; border:1px solid #ddd; border-radius:8px; }
+    button { width:100%; padding:.9rem 1.2rem; background:#0ea5e9; color:#fff; border:0; border-radius:10px; font-weight:700; cursor:pointer; }
+    button:hover { background:#0284c7; }
+    .muted { color:#666; font-size:.9rem; margin-top:.5rem; }
+    .success { color:#16a34a; font-weight:600; margin-top:.75rem; }
+    .error { color:#dc2626; font-weight:600; margin-top:.75rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Registrati</h2>
+    <form id="regForm">
+      <label>Nome</label>
+      <input id="name" required />
+      <label>Telefono</label>
+      <input id="phone" required />
+      <label>Email (opzionale)</label>
+      <input id="email" />
+      <button type="submit">Invia</button>
+      <div id="msg" class="muted">I dati saranno inviati in modo sicuro.</div>
+    </form>
+  </div>
+  <script>
+    const API = location.origin + '/api/clients';
+    const form = document.getElementById('regForm');
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.textContent = 'Invio in corso…';
+      try {
+        const payload = {
+          name: document.getElementById('name').value.trim(),
+          phone: document.getElementById('phone').value.trim(),
+          email: document.getElementById('email').value.trim()
+        };
+        const res = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+        if (!res.ok) throw new Error('Errore server');
+        msg.textContent = 'Grazie per la registrazione! Verrai reindirizzato…';
+        msg.className = 'success';
+  setTimeout(() => { window.location.href = 'https://www.instagram.com/amodobakery/?utm_source=registrazione&utm_medium=web&utm_campaign=crm'; }, 1500);
+      } catch (err) {
+        msg.textContent = 'Errore durante l\'invio. Riprova.';
+        msg.className = 'error';
+      }
+    });
+  </script>
+</body>
+</html>
