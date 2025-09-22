@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/registrazione.html", "dest": "/backend/public/registrazione.html" },
+    { "src": "/(.*)", "dest": "/backend/index.js" }
+  ]
+}
