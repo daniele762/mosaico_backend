@@ -7,7 +7,7 @@
     }
   ],
   "routes": [
-    { "src": "/registrazione.html", "dest": "/backend/public/registrazione.html" },
+  { "src": "/registrazione.html", "dest": "/public/registrazione.html" },
     { "src": "/(.*)", "dest": "/backend/index.js" }
   ]
 }
